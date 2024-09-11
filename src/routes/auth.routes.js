@@ -23,7 +23,6 @@ router.get("/profile", (req, res) => {
   if (!req.isAuthenticated()) {
     return res.redirect("/");
   }
-  console.log("req.user", req.user);
   res.send(
     `<h1>Welcome, ${req.user.name}</h1><a href="/v1/auth/logout">Logout</a>`
   );
